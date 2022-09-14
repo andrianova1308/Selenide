@@ -10,8 +10,8 @@ build: off  # будем использовать свой скрипт сбор
 
 install:
   # запускаем SUT (& означает, что в фоновом режиме - не блокируем терминал для запуска тестов)
-  - java -jar ./artifacts/app-order.jar &
-  - chmod +x gradlew
-# запускаем тест в режиме headless флаг, --info позволяет выводить больше информации
+  - java -jar ./artifacts/app-card-delivery.jar &
+
 build_script:
-  - ./gradlew test --info -Dselenide.headless=true
+  - chmod +x gradlew
+  - ./gradlew test -Dselenide.headless=true
